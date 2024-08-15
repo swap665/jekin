@@ -1,2 +1,2 @@
 import streamlit as st
-st.write("hello Swapnil")
+st.write("hello world")
