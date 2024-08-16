@@ -6,7 +6,12 @@ pipeline{
                 git url:'https://github.com/swap665/jekin.git', branch:'main'
             }
 
-
+        }
+        stage("remove stage"){
+            steps{
+                sh 'docker rm -f $(docker ps -aq)'
+                sg 'docker rmi myimage'
+            }
         }
         stage('Build docker image'){
             steps{
