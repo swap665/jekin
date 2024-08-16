@@ -10,7 +10,7 @@ pipeline{
         stage("remove stage"){
             steps{
                 sh 'docker rm -f $(docker ps -aq)'
-                sg 'docker rmi myimage'
+                sh 'docker rmi myimage'
             }
         }
         stage('Build docker image'){
