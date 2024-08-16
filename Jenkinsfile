@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("CHECKOUT COSE"){
             steps{
-                git url:'https://github.com/swap665/jekin.git' branch:'main'
+                git url:'https://github.com/swap665/jekin.git', branch:'main'
             }
 
 
