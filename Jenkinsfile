@@ -7,6 +7,12 @@ pipeline{
             }
 
         }
+         stage("remove stage"){
+            steps{
+                sh 'docker rm -f $(docker ps -aq)'
+                sh 'docker rmi myimage'
+            }
+        }
        
         stage('Build docker image'){
             steps{
